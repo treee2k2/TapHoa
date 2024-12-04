@@ -1,0 +1,249 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.header_top {
+  background: #f5f5f5;
+}
+
+.header_top_left {
+  display: flex;
+  ul {
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+
+    li {
+      font-size: 14px;
+      color: map.get($theme-colors, "normal-text");
+      display: flex;
+      align-items: center;
+      column-gap: 2px;
+    }
+
+    li:first-child {
+      position: relative;
+      &::after {
+        position: absolute;
+        right: -10px;
+        top: 10px;
+        height: 20px;
+        width: 1px;
+        background: #000000;
+        opacity: 0.1;
+        content: "";
+      }
+    }
+  }
+}
+
+.header_top_right {
+  //background: red;
+  display: grid;
+  justify-content: flex-end;
+  padding: 10px 0 13px;
+  ul {
+    display: flex;
+    column-gap: 10px;
+    list-style: none;
+
+    a {
+      font-size: 14px;
+      display: inline-block;
+      color: map.get($theme-colors, "normal-text");
+    }
+
+    li:last-child {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    span {
+      font-size: 13px;
+      margin-left: 2px;
+    }
+  }
+}
+.header_logo {
+  padding: 15px 0;
+  margin-right: 30px;
+}
+
+.header_menu {
+  padding: 25px 0;
+  margin-left: 20px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    .active a {
+      color: map.get($theme-colors, "main");
+    }
+
+    li {
+      list-style: none;
+      position: relative;
+      a {
+        text-decoration: none; // bỏ dấu gạch dưới chân
+        font-size: 14px;
+        color: map.get($theme-colors, "bold-text");
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: all 0.3s;
+        padding: 5px 0;
+        display: block;
+      }
+    }
+    li:hover .header_menu_dropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .header_menu_dropdown {
+      background: #000000;
+      display: block;
+      position: absolute;
+      width: 180px;
+      z-index: 9;
+      padding: 5px 0;
+      transition: all, 0.3s;
+      opacity: 0;
+      visibility: hidden;
+      li {
+        a {
+          text-transform: capitalize;
+          color: #fff;
+          font-size: 400;
+          padding: 5px 15px;
+        }
+        :hover {
+          color: map.get($theme-colors, "main");
+        }
+      }
+    }
+  }
+}
+
+.header_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 24px;
+
+  ul {
+    display: flex;
+    margin-right: 25px;
+
+    li {
+      list-style: none;
+      position: relative;
+      margin-left: 20px;
+
+      svg {
+        font-size: 25px;
+        color: map.get($theme-colors, "normal-text");
+      }
+
+      span {
+        color: #fff;
+        background: map.get($theme-colors, "main");
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        left: 20px;
+        top: -5px;
+      }
+    }
+  }
+}
+
+.hero_categories {
+  position: relative;
+
+  .hero_categories_all {
+    background: map.get($theme-colors, "main");
+    padding: 15px 25px 15px 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    color: #fff;
+
+    svg,
+    span {
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    svg {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    position: absolute;
+    opacity: 1;
+    border: 1px solid #ebebeb;
+    width: 99%;
+    background: #fff;
+    transition: all 0.2s;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        background-color: transparent;
+        font-size: 16px;
+        color: map.get($theme-colors, "normal-text");
+        line-height: 39px;
+        display: block;
+        padding-left: 40px;
+      }
+
+      &:hover {
+        background: #f7ffff;
+
+        a {
+          color: map.get($theme-colors, "main");
+        }
+      }
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+  }
+}
+.hero_search_container {
+  //background: red;
+  padding-left: 15px;
+
+  .hero_search_form{
+    display: flex;
+    input{
+      border: none;
+      height: 48px;
+      font-size: 16px;
+      color: #b2b2b2;
+      padding-left: 20px;
+      border: 1px solid #ebebeb;
+      
+      :focus{
+        outline: none;
+        border: none;
+      }
+    }
+  }
+  button{
+    font-size: 14px;
+    
+  }
+}
