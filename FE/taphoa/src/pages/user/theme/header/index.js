@@ -7,17 +7,19 @@ import {
     CiMail,
     CiTwitter,
     CiMenuBurger,
-    CiPhone
+    CiPhone,
+    CiShoppingCart,
+    CiCircleChevDown,
+    CiCircleChevUp
 } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { RxDiscordLogo } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { formatter } from "../../../../utils/fomater";
-import { CiShoppingCart } from "react-icons/ci";
 import { ROUTERS } from "../../../../utils/router";
 const Header = () => {
     const [isShowCategories, setShowCategories] = useState(true);
-    const [menus] = useState([
+    const [menus, setMenus] = useState([
         {
             name: "Trang chủ ",
             path: ROUTERS.USER.HOME,
@@ -54,17 +56,108 @@ const Header = () => {
             path: ROUTERS.USER.PRODUCT,
         },
 
-    ])
+    ]);
+    const [ishowHumberger, setShowHumberger] = useState(true);
     return (
         <>
-            <div className="header_top">
+            {/* menu */}
+            <div className={`humberger_menu_overlay ${ishowHumberger ? "active" : ""}`}
+                onClick={() => setShowHumberger(false)}
+            />
+
+            <div className={`humberger_menu_wrapper ${ishowHumberger ? "show" : ""}`}>
+                <div className="header_logo">
+                    <h1>GREEN FOOT</h1>
+                </div>
+                <div className="humberger_menu_cart">
+                    <ul>
+                        <li>
+                            <Link to={""}>
+                                <CiShoppingCart /> <span>1</span>
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className="header_cart_price">
+                        Giỏ hàng <span>{formatter(1230000)}</span>
+                    </div>
+                </div>
+                <div className="humberger_menu_widget">
+                    <div className="header_top_right_auth">
+                        <Link to={""}>
+                            <CiUser /> Đăng nhập
+                        </Link>
+                    </div>
+                </div>
+                <div className="humberger_menu_nav">
+                    <ul>
+                        {menus.map((menu, menuKey) => (
+                            <li key={menuKey} to={menu.path}>
+                                <Link
+                                    to={menu.path}
+                                    onClick={() => {
+                                        const newMenus = [...menus];
+                                        newMenus[menuKey].isShowSubmenu = !newMenus[menuKey].isShowSubmenu;
+                                        setMenus(newMenus);
+                                    }}
+                                >
+                                    {menu.name}
+                                    {menu.child && (
+                                        menu.isShowSubmenu ?
+                                            (<CiCircleChevDown />)
+                                            :
+                                            (<CiCircleChevUp />)
+                                    )}
+                                </Link>
+                                {menu.child && (
+                                    <ul className={`header_menu_dropdown 
+                                    ${menu.isShowSubmenu ? "show_submenu" : ""}`}>
+                                        {menu.child.map((childItem, childKey) => (
+                                            <li key={`${menuKey}-${childKey}`}>
+                                                <Link to={childItem.path}>{childItem.name}</Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </li>
+                        ))}
+
+                    </ul>
+
+                </div>
+                <div className="header_top_right_social">
+                    <Link to={""}>
+                        <CiFacebook />
+                    </Link>
+                    <Link to={""}>
+                        <FaInstagram />
+                    </Link>
+                    <Link to={""}>
+                        <RxDiscordLogo />
+                    </Link>
+                    <Link to={""}>
+                        <CiTwitter />
+                    </Link>
+                </div>
+                <div className="humberger_menu_contact">
+                    <ul>
+                        <li>
+                            <CiMail/>greenfoot@gmail.com
+                        </li>
+                        <li>Miễn phí đơn từ {formatter(200000)}</li>
+                    </ul>
+
+                </div>
+            </div >
+            {/* end menu */}
+
+            < div className="header_top" >
                 <div className="container">
                     <div className="row">
                         <div className="col-6 header_top_left">
                             <ul>
                                 <li>
                                     <CiMail />
-                                    builiem2522002@gmail.com
+                                    greenfoot@gmail.com
                                 </li>
                                 <li>
                                     Miễn phí ship đơn từ {formatter(200000)}
@@ -103,14 +196,14 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             <div className="container">
                 <div className="row">
                     <div className="header_logo">
                         <h1>GREEN FOOT</h1>
                     </div>
-                    <div className="col-xl-6">
+                    <div className="col-lg-6">
                         <nav className="header_menu">
                             <ul>
                                 {menus?.map((menu, menuKey) => (
@@ -134,21 +227,26 @@ const Header = () => {
                                 }
                             </ul>
                         </nav>
-
                     </div>
-                    <div className="header_cart">
-                        <div className="header_cart_price">
-                            <span>{formatter(1230000)}</span>
+                    <div className="col-lg-3">
+                        <div className="header_cart">
+                            <div className="header_cart_price">
+                                <span>{formatter(1230000)}</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <Link to="">
+                                        <CiShoppingCart /> <span>5</span>
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>
-                                <Link to="">
-                                    <CiShoppingCart /> <span>5</span>
-                                </Link>
-                            </li>
-                        </ul>
+                        <div className="humberger_open">
+                            <CiMenuBurger onClick={() =>
+                                setShowHumberger(true)
+                            } />
+                        </div>
                     </div>
-
                 </div>
 
             </div>
@@ -192,9 +290,10 @@ const Header = () => {
                                     sạch 100%
                                 </h2>
                                 <p>Miễn phí giao hàng tận nơi</p>
-                                <Link to="" className="primary-btn">Mua ngay</Link>
+                                <Link to="" className="primary-btn">
+                                    Mua ngay
+                                </Link>
                             </div>
-
                         </div>
                     </div>
                 </div>
