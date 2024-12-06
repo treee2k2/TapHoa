@@ -6,7 +6,8 @@ import {
     CiUser,
     CiMail,
     CiTwitter,
-    CiMenuBurger
+    CiMenuBurger,
+    CiPhone
 } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { RxDiscordLogo } from "react-icons/rx";
@@ -107,7 +108,7 @@ const Header = () => {
             <div className="container">
                 <div className="row">
                     <div className="header_logo">
-                        <h1>TẠP HOÁ</h1>
+                        <h1>GREEN FOOT</h1>
                     </div>
                     <div className="col-xl-6">
                         <nav className="header_menu">
@@ -170,11 +171,30 @@ const Header = () => {
                         <div className="hero_search">
                             <div className="hero_search_form">
                                 <form>
-                                    <input type="submit" placeholder="Bạn đang tìm gì?" />
+                                    <input type="text" placeholder="Bạn đang tìm gì?" />
                                     <button type="submit" >Tìm kiếm</button>
                                 </form>
-
                             </div>
+                            <div className="hero_search_phone">
+                                <div className="hero_search_phone_icon">
+                                    <CiPhone />
+                                </div>
+                                <div className="hero_search_phone_text">
+                                    <p>0945.938.033</p>
+                                    <span>Hỗ trợ 24/7</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="hero_item">
+                            <div className="hero_text">
+                                <span>Trái cây tươi</span>
+                                <h2>Rau quả<br />
+                                    sạch 100%
+                                </h2>
+                                <p>Miễn phí giao hàng tận nơi</p>
+                                <Link to="" className="primary-btn">Mua ngay</Link>
+                            </div>
+
                         </div>
                     </div>
                 </div>
