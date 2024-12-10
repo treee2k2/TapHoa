@@ -96,7 +96,7 @@
       position: relative;
       overflow: hidden;
       background-position: center;
-      margin-right: 10px;
+      //margin-right: 10px;
 
       ul {
         position: absolute;
@@ -165,4 +165,29 @@
   gap: 171px;
   margin-bottom: 30px;
   width: 100%;
+
+  @include Responsive($WIDE_MOBILE) {
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@include Responsive($MEDIUM_DEVICE) {
+  .container {
+    width: 990px !important;
+  }
+}
+
+@include Responsive($TABLET_DEVICE) {
+  .container {
+    width: 750px !important;
+  }
+}
+@include Responsive($WIDE_MOBILE) {
+  .container {
+    width: 540px !important;
+  }
 }
