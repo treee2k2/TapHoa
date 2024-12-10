@@ -1,4 +1,5 @@
 
+import ProductsPage from "pages/user/productsPage";
 import Homepage from "./pages/user/homepage";
 import ProfilePage from "./pages/user/profilePage";
 import MasterLayout from "./pages/user/theme/masterLayout";
@@ -16,7 +17,7 @@ const renderUserRouter = () => {
         },
         {
             path: ROUTERS.USER.PRODUCTS,
-            component: <ProfilePage />,
+            component: <ProductsPage />,
         },
     ];
 

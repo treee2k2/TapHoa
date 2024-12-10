@@ -21,11 +21,10 @@ import featuredImg6 from "../../../assets/user/images/featured/featured6.jpg";
 import featuredImg7 from "../../../assets/user/images/featured/featured7.jpg";
 //import featuredImg8 from "../../../assets/user/images/featured/featured8.jpg";
 import featuredImg9 from "../../../assets/user/images/featured/featured9.jpg";
+import { ProductCard } from "component";
 
-import { LuEye } from "react-icons/lu";
-import { CiShoppingCart } from "react-icons/ci";
-import { Link } from "react-router-dom";
-import { formatter } from "utils/fomater";
+
+
 
 const HomePage = () => {
     const responsive = {
@@ -191,32 +190,11 @@ const HomePage = () => {
 
             const tabPanel = [];
             data[key].products.forEach((item, j) => {
-                tabPanel.push(<div className="col-lg-3" key={j}>
-                    <div className="featured_item">
-                        <div className="featured_item_pic"
-                            style={{
-                                backgroundImage: `url(${item.img})`
-                            }}
-                        >
-                            <ul className="featured_item_pic_hover">
-                                <li>
-                                    <LuEye />
-                                </li>
-                                <li>
-                                    <CiShoppingCart />
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="featured_item_text">
-                            <h6>
-                                <Link to="">{item.name}</Link>
-                            </h6>
-                            <h5>
-                                {formatter(item.price)}
-                            </h5>
-                        </div>
+                tabPanel.push(
+                    <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12" key={j}>
+                        <ProductCard name={item.name} img={item.img} price={item.price} />
                     </div>
-                </div>);
+                );
             });
             tabPanels.push(tabPanel);
 
