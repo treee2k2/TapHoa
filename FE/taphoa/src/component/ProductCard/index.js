@@ -3,8 +3,9 @@ import { memo } from "react";
 import "./style.scss";
 import { LuEye } from "react-icons/lu";
 import { CiShoppingCart } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, generatePath } from "react-router-dom";
 import { formatter } from "utils/fomater";
+import { ROUTERS } from "utils/router";
 
 const ProductCard = ({ img, name, price }) => {
     return (
@@ -26,7 +27,7 @@ const ProductCard = ({ img, name, price }) => {
                 </div>
                 <div className="featured_item_text">
                     <h6>
-                        <Link to={""}>{name}</Link>
+                        <Link to={generatePath(ROUTERS.USER.PRODUCT, { id: 1 })}>{name}</Link>
                     </h6>
                     <h5>
                         {formatter(price)}
