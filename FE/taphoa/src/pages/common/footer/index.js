@@ -14,11 +14,11 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12">
             <div className="footer__about">
-              <h1 className="footer__about__logo">SiVi SHOP</h1>
+              <h1 className="footer__about__logo">GREEN FOOT</h1>
               <ul>
                 <li>Địa chỉ: 213 Dương Đình Nghệ</li>
                 <li>Phone: 0977-232-232</li>
-                <li>Email: sivicode@gmail.com</li>
+                <li>Email: builiem2522002@gmail.com</li>
               </ul>
             </div>
           </div>
