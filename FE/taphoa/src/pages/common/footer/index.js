@@ -16,8 +16,8 @@ const Footer = () => {
             <div className="footer__about">
               <h1 className="footer__about__logo">GREEN FOOT</h1>
               <ul>
-                <li>Địa chỉ: 213 Dương Đình Nghệ</li>
-                <li>Phone: 0977-232-232</li>
+                <li>Địa chỉ: Hà Nội</li>
+                <li>Phone: 0945-938-033</li>
                 <li>Email: builiem2522002@gmail.com</li>
               </ul>
             </div>
