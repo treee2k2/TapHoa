@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/TapHoa/static/css/main.9300747c.css",
+    "main.js": "/TapHoa/static/js/main.2f48e388.js",
+    "static/media/banner.jpg": "/TapHoa/static/media/banner.d729564c645e3f7626d7.jpg",
+    "static/media/banner-2.jpg": "/TapHoa/static/media/banner-2.bbe314035c8072906964.jpg",
+    "static/media/banner-1.jpg": "/TapHoa/static/media/banner-1.e22e0504383b073c3b9f.jpg",
+    "static/media/feature-5.jpg": "/TapHoa/static/media/feature-5.ce58cf47b710fbb5568a.jpg",
+    "static/media/feature-6.jpg": "/TapHoa/static/media/feature-6.8587407fc4a4c20f326b.jpg",
+    "static/media/cat-3.jpg": "/TapHoa/static/media/cat-3.35d4f01ec51e79ad3ffe.jpg",
+    "static/media/feature-3.jpg": "/TapHoa/static/media/feature-3.9b16886d90a1a1a5ab2b.jpg",
+    "static/media/be-vietnam-pro-latin-400-normal.woff2": "/TapHoa/static/media/be-vietnam-pro-latin-400-normal.27d7609ea11544718ef8.woff2",
+    "static/media/cat-1.jpg": "/TapHoa/static/media/cat-1.1630256f629026af3bb6.jpg",
+    "static/media/feature-4.jpg": "/TapHoa/static/media/feature-4.488b920f29efb2b8add7.jpg",
+    "static/media/feature-8.jpg": "/TapHoa/static/media/feature-8.725879cc04dfc586ee37.jpg",
+    "static/media/feature-7.jpg": "/TapHoa/static/media/feature-7.ed0795ce840c20a8305e.jpg",
+    "static/media/cat-2.jpg": "/TapHoa/static/media/cat-2.7b1fa381b9ef4f93eb8e.jpg",
+    "static/media/cat-5.jpg": "/TapHoa/static/media/cat-5.8b0bbf5bff381f7ecda7.jpg",
+    "static/media/feature-1.jpg": "/TapHoa/static/media/feature-1.8b0bbf5bff381f7ecda7.jpg",
+    "static/media/feature-2.jpg": "/TapHoa/static/media/feature-2.3ac1f1f488df075ce75a.jpg",
+    "static/media/be-vietnam-pro-latin-400-normal.woff": "/TapHoa/static/media/be-vietnam-pro-latin-400-normal.cd4862ab7a14b2e574eb.woff",
+    "static/media/cat-4.jpg": "/TapHoa/static/media/cat-4.f3f692e5e3781bb0550d.jpg",
+    "static/media/be-vietnam-pro-latin-ext-400-normal.woff2": "/TapHoa/static/media/be-vietnam-pro-latin-ext-400-normal.82e105ea3d2be67ace15.woff2",
+    "static/media/revicons.eot": "/TapHoa/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/TapHoa/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/be-vietnam-pro-vietnamese-400-normal.woff2": "/TapHoa/static/media/be-vietnam-pro-vietnamese-400-normal.1ac573b4b2c95f9275ee.woff2",
+    "static/media/be-vietnam-pro-latin-ext-400-normal.woff": "/TapHoa/static/media/be-vietnam-pro-latin-ext-400-normal.55b6d057118888561ffa.woff",
+    "static/media/revicons.woff": "/TapHoa/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/be-vietnam-pro-vietnamese-400-normal.woff": "/TapHoa/static/media/be-vietnam-pro-vietnamese-400-normal.69c7020eb25d25cf2794.woff",
+    "index.html": "/TapHoa/index.html",
+    "main.9300747c.css.map": "/TapHoa/static/css/main.9300747c.css.map",
+    "main.2f48e388.js.map": "/TapHoa/static/js/main.2f48e388.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9300747c.css",
+    "static/js/main.2f48e388.js"
+  ]
+}
