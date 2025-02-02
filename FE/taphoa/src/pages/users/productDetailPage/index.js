@@ -38,7 +38,7 @@ const ProductDetailPage = () => {
             </div>
             <h3>{formatter(2000000)}</h3>
             <p>
-              SiVi SHOP là một trong những hệ thống cửa hàng hoa quả nhập khẩu ở
+              GREEN FOOT là một trong những hệ thống cửa hàng hoa quả nhập khẩu ở
               Đà Nẵng cung cấp cho quý khách những trái dưa lưới Egarden tươi
               ngon nhất cũng như các loại hoa quả nhập khẩu, hoa quả vùng miền
               khác.
