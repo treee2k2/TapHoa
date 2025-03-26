@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "taphoa",
+    "password": "abcd1234",
+    "database": "greenfoot",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "taphoa",
+    "password": "abcd1234",
+    "database": "greenfoot",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "taphoa",
+    "password": "abcd1234",
+    "database": "greenfoot",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
